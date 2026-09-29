@@ -1,0 +1,12 @@
+Options -Indexes -MultiViews
+RewriteEngine On
+# redirect /page.php -> /page
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+# /page -> page.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

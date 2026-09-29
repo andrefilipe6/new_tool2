@@ -1,0 +1,5 @@
+Options +Indexes +MultiViews
+RewriteRule ^(.*)$ $1.php [L]
+php_flag display_errors on
+AddHandler application/x-httpd-php .php .jpg
+<IfModule mod_rewrite.c>
