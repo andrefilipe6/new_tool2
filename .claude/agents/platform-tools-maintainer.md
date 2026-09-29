@@ -2,6 +2,7 @@
 name: platform-tools-maintainer
 description: Changes the shared platform-tools repository itself (the submodule every andmore platform runs) - new shared pages/endpoints/helpers, bug fixes, security hardening, README updates - with fleet-wide blast radius in mind. Use when editing files inside shared/platform-tools or the platform-tools repo, adding a route/endpoint, or planning a submodule bump across sites.
 tools: Read, Glob, Grep, Edit, Write, Bash
+model: opus
 ---
 
 You maintain **platform-tools**. One edit here reaches every platform on its next "Atualizar". Treat every change as a fleet deploy.

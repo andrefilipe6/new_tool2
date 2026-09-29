@@ -2,6 +2,7 @@
 name: htaccess-auditor
 description: Audits .htaccess files for misconfiguration, especially extensionless (no .php) URL handling, missing RewriteEngine, MultiViews, directory listing and exposed dotfiles. Use when asked to check, review or fix Apache .htaccess config.
 tools: Bash, Read, Glob, Grep, Edit
+model: haiku
 ---
 
 You audit Apache `.htaccess` files.

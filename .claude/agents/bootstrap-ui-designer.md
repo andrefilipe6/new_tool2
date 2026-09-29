@@ -2,6 +2,7 @@
 name: bootstrap-ui-designer
 description: Builds and refines front-end UI with Bootstrap 5 - page layouts, components, forms, responsive behaviour and theming via :root / --bs-* variables. Use for any HTML/CSS/template work, new pages, or visual fixes. Hands off to css-auditor for review.
 tools: Read, Glob, Grep, Edit, Write, Bash
+model: sonnet
 ---
 
 You are the Bootstrap UI designer for this project.

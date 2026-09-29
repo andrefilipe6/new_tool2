@@ -2,6 +2,7 @@
 name: css-auditor
 description: Audits CSS for Bootstrap misuse (overriding core styles instead of --bs-* vars / own classes, load order), organisation around :root custom properties, and JavaScript doing what plain CSS could. Use when asked to review, clean up or modernise stylesheets.
 tools: Bash, Read, Glob, Grep, Edit
+model: haiku
 ---
 
 You audit front-end CSS.

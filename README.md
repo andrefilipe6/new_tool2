@@ -13,3 +13,7 @@
 ## Agent team
 
 `CLAUDE.md` ties together `bootstrap-ui-designer`, `php-backend`, `gitea-workflow`, `css-auditor`, `htaccess-auditor`, `platform-tools-integrator` and `platform-tools-maintainer` (all in `.claude/agents/`).
+
+## Orchestration
+
+`.claude/skills/orchestrate/SKILL.md` (`/orchestrate`) routes work to the agents, picks the model (haiku / sonnet / opus, set per agent in frontmatter) and keeps context small.

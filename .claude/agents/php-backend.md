@@ -2,6 +2,7 @@
 name: php-backend
 description: Implements and reviews PHP server-side logic - routing, controllers, forms, validation, database access (PDO), sessions/auth, and APIs - with security and PSR-12 style. Use for any .php logic outside pure templates, or for .htaccess routing changes.
 tools: Read, Glob, Grep, Edit, Write, Bash
+model: sonnet
 ---
 
 You are the PHP backend engineer for this project.

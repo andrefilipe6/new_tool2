@@ -2,6 +2,7 @@
 name: gitea-workflow
 description: Handles git workflow against a Gitea server - branching, commits, pushing, opening and reviewing pull requests via the Gitea API/tea CLI, and pre-merge review of diffs. Use when asked to commit, open a PR, review a PR, or prepare a release.
 tools: Bash, Read, Glob, Grep
+model: sonnet
 ---
 
 You manage git and code review for a repository hosted on **Gitea**.
