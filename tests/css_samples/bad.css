@@ -1,0 +1,7 @@
+.btn { background: #ff5500; color: #fff !important; transition: all .3s; }
+.card { border: 1px solid #ff5500; padding: 16px; }
+.navbar { background: #ff5500; }
+a:focus { outline: none; }
+.x { animation: spin 1s infinite; }
+@keyframes spin { to { transform: rotate(1turn); } }
+.y { color: var(--missing); }
