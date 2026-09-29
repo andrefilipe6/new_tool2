@@ -9,3 +9,7 @@
 - `css_audit.py PATH...` — checks Bootstrap overrides and load order, `:root` var organisation, and JS that CSS could replace (`--json`, `--strict`).
 - `.claude/agents/css-auditor.md` — subagent that runs it and explains fixes.
 - `tests/css_samples/` — good/bad examples.
+
+## Agent team
+
+`CLAUDE.md` ties together `bootstrap-ui-designer`, `php-backend`, `gitea-workflow`, `css-auditor` and `htaccess-auditor` (all in `.claude/agents/`).
