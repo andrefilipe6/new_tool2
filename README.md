@@ -12,7 +12,7 @@
 
 ## Agent team
 
-`CLAUDE.md` ties together `bootstrap-ui-designer`, `php-backend`, `gitea-workflow`, `css-auditor`, `htaccess-auditor`, `platform-tools-integrator` and `platform-tools-maintainer` (all in `.claude/agents/`).
+`CLAUDE.md` ties together `bootstrap-ui-designer`, `php-backend`, `gitea-workflow`, `css-auditor`, `htaccess-auditor`, `platform-tools-integrator`, `platform-tools-maintainer` and `sql-database` (all in `.claude/agents/`).
 
 ## Orchestration
 

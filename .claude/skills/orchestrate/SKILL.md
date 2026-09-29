@@ -1,6 +1,6 @@
 ---
 name: orchestrate
-description: Plan and dispatch work across this project's subagents (bootstrap-ui-designer, php-backend, gitea-workflow, css-auditor, htaccess-auditor, platform-tools-integrator, platform-tools-maintainer), choosing the right model and keeping context and token use low. Use for any multi-step task that spans more than one area, when deciding whether to delegate at all, or when the user types /orchestrate.
+description: Plan and dispatch work across this project's subagents (bootstrap-ui-designer, php-backend, sql-database, gitea-workflow, css-auditor, htaccess-auditor, platform-tools-integrator, platform-tools-maintainer), choosing the right model and keeping context and token use low. Use for any multi-step task that spans more than one area, when deciding whether to delegate at all, or when the user types /orchestrate.
 ---
 
 # Orchestrate
@@ -25,6 +25,7 @@ Delegate when:
 | Run the CSS or `.htaccess` scanner and summarise | `css-auditor` / `htaccess-auditor` | haiku | sonnet if findings need judgement (CSS-over-JS trade-offs, rewrite logic) |
 | Commit, branch, open a PR | `gitea-workflow` | sonnet | haiku for a plain commit + push |
 | Review a PR | `gitea-workflow` | sonnet | opus for security-heavy or large diffs |
+| Schema, migrations, SQL review, soft delete, audit columns | `sql-database` | sonnet | opus for migrations on live data, auth tables, legacy-hash cleanup |
 | Pages, components, styling | `bootstrap-ui-designer` | sonnet | none |
 | PHP logic, forms, DB, APIs | `php-backend` | sonnet | opus for auth, crypto, sessions, payments, migrations on live data |
 | Wire a site to platform-tools / adopt a shared feature | `platform-tools-integrator` | sonnet | none |
@@ -41,7 +42,7 @@ Each agent's default model is set in its frontmatter. Override it for a single c
 
 ## 3. Standard pipelines
 - **UI-only change:** `bootstrap-ui-designer`, then `css-auditor` (haiku).
-- **Feature needing data:** `php-backend` (defines the view contract), then `bootstrap-ui-designer` with that contract pasted in, then the auditors in parallel.
+- **Feature needing new tables or columns:** `sql-database` (migration and queries), then `php-backend` (repository and audit calls, defines the view contract), then `bootstrap-ui-designer` with that contract pasted in, then the auditors in parallel.
 - **Routing change:** `php-backend`, then `htaccess-auditor`.
 - **New platform:** `platform-tools-integrator`, then `htaccess-auditor`, then `gitea-workflow`.
 - **Shared code change:** `platform-tools-maintainer` (opus), then `gitea-workflow` PR review (sonnet or opus), then the integrator for any per-site steps.

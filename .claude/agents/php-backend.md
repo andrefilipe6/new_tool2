@@ -24,7 +24,7 @@ If the site has `shared/platform-tools`, use its helpers instead of writing your
 | Public forms | antispam, `platform_captcha_*()`, `geo_form_block_reason()`, `platform_ip_record_offence()` |
 | Audit | `platform_audit()` |
 | Conversions | `platform_track_conversion()`, after acceptance only |
-| Migrations | a new SQL file in the site's migrations folder (applied by the shared runner) |
+| Migrations, schema, SQL review | **sql-database** writes them. You write the repository functions, set `created_by`/`edited_by`/`deleted_by` from the session user and call `platform_audit()` on every change |
 
 If a shared helper is missing something, propose the change to **platform-tools-maintainer**. Don't fork it into the site. Wiring questions go to **platform-tools-integrator**.
 

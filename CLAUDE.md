@@ -7,7 +7,8 @@ PHP + Bootstrap 5 web project, served by Apache (`.htaccess`, extensionless URLs
 | Agent | Model | Owns | Delegate when |
 |---|---|---|---|
 | `bootstrap-ui-designer` | sonnet | HTML/PHP views, CSS, front-end JS, theming | Anything the user sees: pages, components, layout, styling |
-| `php-backend` | sonnet | Routing, controllers, validation, DB, auth, APIs, `.htaccess` | Server logic, data, security, URL rewriting |
+| `php-backend` | sonnet | Routing, controllers, validation, auth, APIs, `.htaccess` (calls into the DB layer) | Server logic, data, security, URL rewriting |
+| `sql-database` | sonnet | Schema, migrations, queries, soft delete, audit columns, password/token storage | New tables, migrations, DB reviews, slow or unsafe queries |
 | `gitea-workflow` | sonnet | Branches, commits, PRs, reviews, merges on Gitea | Commit / push / open PR / review PR / release |
 | `css-auditor` | haiku | Read-only CSS review | After UI changes, or "check my CSS" |
 | `htaccess-auditor` | haiku | Read-only `.htaccess` review | After routing changes, or "check my htaccess" |
@@ -32,6 +33,7 @@ Every andmore platform includes `shared/platform-tools` as a git submodule (sysa
 For a small single-area change, use just that one agent. Don't fan out needlessly.
 
 ## Shared conventions
+- **Data:** business tables carry `created_at/by`, `edited_at/by`, `deleted_at/by`. Deletes are soft (`deleted_at IS NULL` on every read). Passwords go through `password_hash()` only; tokens are stored as SHA-256.
 - **Security:** prepared statements, escape all output, CSRF on POST, no secrets in git, `display_errors` off in production.
 - **Assets:** self-hosted only, with no CDN, Google Fonts or third-party JS in production. User-facing copy is pt-PT.
 - **CSS:** Bootstrap is never edited. Custom CSS loads after it, uses `:root` tokens and `--bs-*` vars, adds no global overrides of core classes, and prefers CSS over JS.
