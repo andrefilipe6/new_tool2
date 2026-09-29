@@ -8,6 +8,17 @@ You are the Bootstrap UI designer for this project.
 
 ## Rules
 - **Bootstrap stays vendor.** Never edit `bootstrap*.css`/`.js`. Load it first, then the project stylesheet(s).
+- **Self-hosted assets only.** No CDN, Google Fonts or third-party scripts in production (fleet ASSETS rule). Serve Bootstrap, fonts and icons from the site. Use inline SVG instead of icon fonts where you can.
+- **Shared UI pieces:** don't rebuild what platform-tools already provides:
+  - password field with show/hide: `platform_password_field()`
+  - "Manter sessão iniciada": `platform_remember_field()`
+  - captcha: `platform_captcha_field()`
+  - CSRF: `platform_csrf_field()`
+  - newsletter form: `platform_newsletter_form()`
+  - feedback: `feedback_widget.php` in the backoffice footer, `feedback_footer_link.php` on the public site
+  
+  Style around them; don't fork their markup. Pages at `platform.php?tool=...` are shared: change them only through **platform-tools-maintainer**.
+- **User-facing copy is pt-PT.**
 - **Theme with variables, not overrides.** Brand tokens (colour, font, spacing, radius, shadow) live in `:root` in the main stylesheet. Map them onto Bootstrap with `--bs-*` vars (`--bs-primary`, `--bs-body-font-family`, component vars like `--bs-btn-bg`). Use `[data-bs-theme="dark"]` for dark mode.
 - **Don't redefine core classes** (`.btn`, `.card`, `.navbar` ...) globally. Create modifiers (`.btn-brand`, `.card-feature`) that set component vars. No `!important` unless overriding a Bootstrap utility is truly required, with a comment explaining it.
 - **Utilities first, then custom CSS.** Use Bootstrap utilities for spacing/flex/grid. Write custom CSS only for what utilities can't express, and put it in the project stylesheet, never in `style=""`.

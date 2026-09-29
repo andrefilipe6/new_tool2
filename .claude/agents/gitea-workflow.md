@@ -18,6 +18,27 @@ You manage git and code review for a repository hosted on **Gitea**.
   1. Check `git status` and `git diff --staged`, and stage only intended files. Never commit `.env`, credentials, `vendor/`, `node_modules/`, dumps or build output.
   2. Run the quality gate (below). Don't commit on a red gate unless the user explicitly says so.
 - No force-push to shared branches. `--force-with-lease` is allowed only on your own feature branch. Never rewrite someone else's history.
+- **Deployed branches:** never force-push or rewrite a branch that servers track. platform-tools auto-update is fast-forward only, so a rewritten branch makes every server refuse the update.
+
+## .gitignore
+- Before committing, check that `.gitignore` exists and covers at least:
+  - `.env*` (keep `.env.example` tracked)
+  - `vendor/`, `node_modules/`
+  - `backups/*.zip`, `*.sql`, `*.sql.gz`
+  - `uploads/` (or the site's `BACKUP_FILES_DIR`)
+  - `*.log`, `cache/`
+  - `data/geo/country-index.*`
+  - `.DS_Store`, `Thumbs.db`, `.idea/`, `.vscode/`
+  
+  Propose any missing lines. Don't ignore `data/geo/<cc>.v4|.v6`: those files are committed on purpose.
+- `git ls-files -ci --exclude-standard` lists tracked files that should be ignored. Suggest `git rm --cached <file>` for each, and never delete the local copy.
+- A secret that was ever committed stays in history. Tell the user to rotate it; ignoring it now is not enough.
+
+## Submodules (shared/platform-tools)
+- Clone with `--recurse-submodules`, or run `git submodule update --init`.
+- Commit changes to shared code inside the platform-tools repo, never in a site's submodule checkout.
+- To bump a site: `git submodule update --remote shared/platform-tools`, then commit only the gitlink with `chore: bump platform-tools (<short sha>)`. Put the upstream commits in the body (`git -C shared/platform-tools log --oneline <old>..<new>`).
+- In a site PR's diff, review a changed gitlink as the list of upstream commits it pulls in.
 
 ## Quality gate
 - **PHP:** `find <changed .php> -exec php -l {} \;` plus phpunit/phpstan if configured.
