@@ -26,6 +26,7 @@ Delegate when:
 | Commit, branch, open a PR | `gitea-workflow` | sonnet | haiku for a plain commit + push |
 | Review a PR | `gitea-workflow` | sonnet | opus for security-heavy or large diffs |
 | Schema, migrations, SQL review, soft delete, audit columns | `sql-database` | sonnet | opus for migrations on live data, auth tables, legacy-hash cleanup |
+| Icon packs, logo animation | `icon-designer` | sonnet | opus for a whole brand system in one go |
 | Pages, components, styling | `bootstrap-ui-designer` | sonnet | none |
 | PHP logic, forms, DB, APIs | `php-backend` | sonnet | opus for auth, crypto, sessions, payments, migrations on live data |
 | Wire a site to platform-tools / adopt a shared feature | `platform-tools-integrator` | sonnet | none |

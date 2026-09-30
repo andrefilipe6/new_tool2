@@ -13,6 +13,7 @@ PHP + Bootstrap 5 web project, served by Apache (`.htaccess`, extensionless URLs
 | `css-auditor` | haiku | Read-only CSS review | After UI changes, or "check my CSS" |
 | `htaccess-auditor` | haiku | Read-only `.htaccess` review | After routing changes, or "check my htaccess" |
 | `platform-tools-integrator` | sonnet | A site's wiring to `shared/platform-tools` (`platform_connect()`, stubs, `.env`, cron, backups, webhook) | New platform, adopting a shared feature, a shared page/endpoint broken on one site |
+| `icon-designer` | sonnet | Icon packs (SVG, CSS animation), animated logos, design canvas + `design/` source | New icons, replacing `bi-*`, mascots, logo animation |
 | `platform-tools-maintainer` | opus | The platform-tools repo itself | Any change to shared code; planning a fleet-wide submodule bump |
 
 **Delegation:** for anything spanning more than one area, load the `orchestrate` skill (`/orchestrate`). It covers when to delegate at all, which agent and model to use, pipelines, brief format and saving context. Subagents can't start other subagents, so the main conversation always does the hand-offs.
