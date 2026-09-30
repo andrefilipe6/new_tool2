@@ -36,6 +36,13 @@
       "w": 1280,
       "h": 1640,
       "title": "Ícones do menu lateral"
+    },
+    "Actions.dc.html": {
+      "x": 4080,
+      "y": 0,
+      "w": 1280,
+      "h": 1180,
+      "title": "Ícones de ações"
     }
   },
   "createdOnFiles": {
@@ -52,7 +59,8 @@
     "LogoSpin.dc.html",
     "LogoFall.dc.html",
     "LogoDance.dc.html",
-    "Dashboard.dc.html"
+    "Dashboard.dc.html",
+    "Actions.dc.html"
   ],
   "pages": [],
   "title": "Dance Soul Icons"
