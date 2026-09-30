@@ -5,6 +5,7 @@ Canvas: https://claude.ai/artifact/DxeAF7rQGGuWQNEJb9asSi
 - `Filled.dc.html`: 10 modality icons, filled, brand pink `#E01060` + cyan `#40C0E0`, heads and accents as rounded diamonds like the logo (the earlier outline set was dropped).
 - `Dashboard.dc.html`: one `fi-*` icon for every entry of the real backoffice sidebar (31, replacing the `bi-*`), with the sidebar rebuilt with the same groups and labels.
 - `Actions.dc.html`: 25 action icons (ver, esconder, editar, apagar, responder, concluir, calendário, …) replacing the listed `bi-*`, with a backoffice table example.
+- `showcase.html`: standalone showcase page of all 66 icons + the animated logo (search, motion, brand backgrounds, size, copy SVG/CSS). Published: https://claude.ai/artifact/KA5hk5mfASgPyxyHMCwSXX
 - `LogoSpin` / `LogoFall` / `LogoDance`: three animations of the official `logo.svg` (paths unchanged).
 
 10 modality icons for dancesoulacademy.pt: `fi-ballet`, `fi-hiphop`, `fi-jazz`, `fi-contemporaneo`, `fi-salao`, `fi-latinos`, `fi-ginastica`, `fi-pilates`, `fi-fitness`, `fi-infantil`.
