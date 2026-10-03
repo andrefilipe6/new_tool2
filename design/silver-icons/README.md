@@ -11,3 +11,5 @@ Same system as `design/dancesoul-icons`: 24×24, two-tone through classes (`.fp 
 | `Actions.dc.html` | 25 action icons replacing `bi-*`; Dance Soul geometry with circle accents |
 
 `build.py` regenerates the three artboards (reads the Dance Soul actions for the shared geometry). The real logo was not available, so the mock shows a `[logótipo]` placeholder.
+
+`showcase.html` (built by `build_showcase.py` from the three artboards) is a standalone page with all icons, animated, with search, brand backgrounds, size and copy SVG/CSS. Published: https://claude.ai/artifact/QMDhx6XaVC1sQveyuANTht
