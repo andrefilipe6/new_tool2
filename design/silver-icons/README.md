@@ -7,7 +7,7 @@ Same system as `design/dancesoul-icons`: 24×24, two-tone through classes (`.fp 
 | Artboard | Contents |
 |---|---|
 | `Main.dc.html` | 15 navigation / tool icons + a mock of the real backoffice header, Ferramentas menu, greeting buttons and empty state |
-| `Surf.dc.html` | 14 surf icons for the public site (lessons, boards, rentals, sea conditions, camp) |
+| `Surf.dc.html` | 16 surf icons for the public site (lessons, boards, rentals, board and wetsuit sizes, sea conditions, camp) |
 | `Actions.dc.html` | 25 action icons replacing `bi-*`; Dance Soul geometry with circle accents |
 
 `build.py` regenerates the three artboards (reads the Dance Soul actions for the shared geometry). The real logo was not available, so the mock shows a `[logótipo]` placeholder.

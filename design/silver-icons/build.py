@@ -69,6 +69,11 @@ SURF = [
     ('Aluguer de prancha', 'aluguer_prancha', board + '<g class="a-swing"><path class="fs" d="M13.2 13h5.2l2.4 2.5-2.4 2.5h-5.2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1z"/>' + C(14.3, 15.5, .8, 'fw') + '</g>'),
     ('Aluguer de fato', 'aluguer_fato', '<path class="fp" d="M9 2.5h6l1.2 2.4 3.6 1.6 1.2 8.3-2.3.6-1.2-6.1-1.5 1.1V21h-3.2l-.8-6.6-.8 6.6H7.8V10.4L6.3 9.3l-1.2 6.1-2.3-.6 1.2-8.3 3.6-1.6z"/>'
      + L("M12 4.5v7.5", 'sw', 1.2) + C(12, 13.2, .9, 'fs', ' a-blink')),
+    ('Tamanho de prancha', 'tamanho_prancha', '<path class="fp" d="M9.5 2.5c2.2 0 3.6 4.2 3.6 9.5s-1.4 9.5-3.6 9.5-3.6-4.2-3.6-9.5 1.4-9.5 3.6-9.5z"/>' + L("M9.5 4.5v15", 'sw', 1)
+     + '<g class="a-pulse">' + L("M18.5 3v18M16.8 4.6l1.7-1.6 1.7 1.6M16.8 19.4l1.7 1.6 1.7-1.6", 'ss', 1.6) + L("M17.3 8h1.2M17.3 12h1.2M17.3 16h1.2", 'ss', 1.2) + '</g>'),
+    ('Tamanho de fato', 'tamanho_fato', '<g transform="translate(-1.4 -.6) scale(.92)"><path class="fp" d="M9 2.5h6l1.2 2.4 3.6 1.6 1.2 8.3-2.3.6-1.2-6.1-1.5 1.1V21h-3.2l-.8-6.6-.8 6.6H7.8V10.4L6.3 9.3l-1.2 6.1-2.3-.6 1.2-8.3 3.6-1.6z"/>'
+     + L("M12 4.5v7.5", 'sw', 1.2) + '</g><g class="a-pulse">' + C(18.6, 18.4, 4.4, 'fs')
+     + '<text class="fw" x="18.6" y="20.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="6">M</text></g>'),
     ('Condições do mar', 'ondas', '<path class="fp" d="M2 20.5c.8-6.2 4.9-11 10.8-11 4 0 7.2 2.4 7.2 5.8 0 2.2-1.6 3.6-3.6 3.6-1.7 0-2.8-1.1-2.8-2.5 0-1 .6-1.8 1.5-2.1-1-.9-2.6-1.3-4.1-1.1-3.5.6-5.6 3.9-6 7.3z"/>'
      + L("M2 21h20", 'ss', 1.8) + C(19, 5, 2.4, 'fs', ' a-pulse')),
     ('Maré', 'mare', Wv(2, 15.5, 7, 'ss', 1.8, ' a-wavex', step=2.86) + Wv(2, 20, 7, 'ss', 1.8, '', step=2.86)
