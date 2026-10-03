@@ -109,10 +109,10 @@ button.fi-card:focus-visible{outline:2px solid #2A1A24;outline-offset:2px}
 </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"motion": {"editor": "enum", "options": ["hover", "loop", "off"], "default": "hover"}, "primary": {"editor": "color", "default": "#1F4566", "options": ["#1F4566", "#0E7490", "#16324A"]}, "secondary": {"editor": "color", "default": "#E9C46A", "options": ["#E9C46A", "#F2D9A0", "#5FB7D4"]}, "$preview": {"width": 1280, "height": 820}}'>
+<script type="text/x-dc" data-dc-script data-props='{"motion": {"editor": "enum", "options": ["hover", "loop", "off"], "default": "loop"}, "primary": {"editor": "color", "default": "#1F4566", "options": ["#1F4566", "#0E7490", "#16324A"]}, "secondary": {"editor": "color", "default": "#E9C46A", "options": ["#E9C46A", "#F2D9A0", "#5FB7D4"]}, "$preview": {"width": 1280, "height": 820}}'>
 class Component extends DCLogic {
 renderVals() {
-return { motion: this.props.motion ?? 'hover', primary: this.props.primary ?? '#1F4566', secondary: this.props.secondary ?? '#E9C46A' };
+return { motion: this.props.motion ?? 'loop', primary: this.props.primary ?? '#1F4566', secondary: this.props.secondary ?? '#E9C46A' };
 }
 }
 </script>

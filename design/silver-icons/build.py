@@ -36,7 +36,7 @@ NAV = [
     ('Alunos', 'alunos', '<path class="fs" d="M1.5 19a4.4 4.4 0 0 1 6-4.1A7.6 7.6 0 0 0 5.4 19z"/><path class="fs" d="M22.5 19a4.4 4.4 0 0 0-6-4.1 7.6 7.6 0 0 1 2.1 4.1z"/>'
      + C(5, 9.5, 1.9, 'fs') + C(19, 9.5, 1.9, 'fs') + '<g class="a-bob">' + C(12, 7, 2.7, 'fp') + '<path class="fp" d="M5.8 20.5a6.2 6.2 0 0 1 12.4 0z"/></g>'),
     ('Ferramentas', 'ferramentas', ''.join(f'<rect class="{"fs a-pulse" if (x, y) == (9.5, 9.5) else "fp"}" x="{x}" y="{y}" width="5" height="5" rx="1.3"/>' for y in (3, 9.5, 16) for x in (3, 9.5, 16))),
-    ('Perfil', 'perfil', C(12, 12, 10, 'fp') + C(12, 9.5, 3, 'fw') + '<path class="fw" d="M6.3 18.6a6.6 6.6 0 0 1 11.4 0 8 8 0 0 1-11.4 0z"/>'),
+    ('Perfil', 'perfil', C(12, 12, 10, 'fp') + '<g class="a-bob">' + C(12, 9.5, 3, 'fw') + '<path class="fw" d="M6.3 18.6a6.6 6.6 0 0 1 11.4 0 8 8 0 0 1-11.4 0z"/></g>'),
     ('Relatórios', 'relatorios', C(7, 7.5, 2.7, 'fp') + '<path class="fp" d="M2.5 19a4.5 4.5 0 0 1 9 0z"/>' + L("M14 7.5h7M14 11.5h7", 'sp', 2) + Wv(14, 16, 2, 'ss', 2, ' a-draw', step=3.5)),
     ('Sócios', 'socios', '<rect class="fp" x="2.5" y="5" width="19" height="14" rx="2.5"/><g class="a-pulse">' + C(8, 10.6, 2.4, 'fs')
      + '<path class="fs" d="M4.8 16.6a3.2 3.2 0 0 1 6.4 0z"/></g>' + L("M13.5 10h5M13.5 13h5M13.5 16h3", 'sw', 1.4)),
@@ -50,7 +50,7 @@ NAV = [
     ('Nova aula', 'nova_aula', cal_base + Wv(6, 15.5, 3, 'sw', 1.6) + '<g class="a-pulse">' + C(18, 18, 4.3, 'fs') + L("M18 16v4M16 18h4", 'sw', 1.6) + '</g>'),
     ('Todas as aulas', 'todas_aulas', ''.join(f'<rect class="fp" x="3" y="{y}" width="18" height="4.4" rx="2.2"/>' + C(5.6, round(y + 2.2, 1), 1.2, 'fs', ' a-blink' if i == 0 else '')
                                              + L(f"M8.5 {round(y + 2.2, 1)}h9", 'sw', 1.3) for i, y in enumerate((3.5, 9.8, 16.1)))),
-    ('Sem aulas', 'sem_aulas', cal_base + L("M9.5 13l5 5M14.5 13l-5 5", 'sw', 2.2)),
+    ('Sem aulas', 'sem_aulas', cal_base + '<g class="a-shake">' + L("M9.5 13l5 5M14.5 13l-5 5", 'sw', 2.2) + '</g>'),
 ]
 
 SURF = [
@@ -111,7 +111,7 @@ for m in re.finditer(r'<div class="fi-card" style="display: flex; align-items: c
 assert len(acts) == 25, len(acts)
 
 
-def page(title, inner, W, H, motion='hover'):
+def page(title, inner, W, H, motion='loop'):
     props = {"motion": {"editor": "enum", "options": ["hover", "loop", "off"], "default": motion},
              "primary": {"editor": "color", "default": NAVY, "options": [NAVY, "#0E7490", "#16324A"]},
              "secondary": {"editor": "color", "default": SAND, "options": [SAND, "#F2D9A0", "#5FB7D4"]},
@@ -187,7 +187,7 @@ mock = f'''<div style="display: flex; flex-direction: column; border-radius: 18p
 </div>
 </div>
 '''
-main = (head('silver.andmore.pt · si-*', 'Ícones de navegação', 'Menu, ferramentas, botões e estado vazio · a onda do sublinhado como motivo · animam ao passar o rato')
+main = (head('silver.andmore.pt · si-*', 'Ícones de navegação', 'Menu, ferramentas, botões e estado vazio · a onda do sublinhado como motivo · animação contínua (ou ao passar o rato, nos ajustes)')
         + mock + grid([card(n, 'si-' + k.replace('_', '-'), b) for n, k, b in NAV], 5))
 surf = head('silver.andmore.pt · site público', 'Ícones de surf', 'Modalidades, aluguer e condições do mar') + grid([card(n, 'si-' + k.replace('_', '-'), b) for n, k, b in SURF], 4)
 acth = head('silver.andmore.pt · ações', 'Ícones de ações', '25 ações que substituem os bi-* · mesma geometria da Dance Soul, acentos em círculo') + grid([card(n, k, b) for n, k, b in acts], 5)

@@ -2,7 +2,7 @@
 
 Canvas: https://claude.ai/artifact/49YMq5rrwaF1MepdsDFpCx
 
-Same system as `design/dancesoul-icons`: 24×24, two-tone through classes (`.fp .fs .fw .sp .ss .sw`, vars `--ip --is --iw`), CSS-only animation (`m-hover` / `m-loop` / off, `prefers-reduced-motion`). Brand: navy `#1F4566` + sand `#E9C46A` (header text `#F2D9A0`). Motif: the wave from the active-menu underline, plus round accents.
+Same system as `design/dancesoul-icons`: 24×24, two-tone through classes (`.fp .fs .fw .sp .ss .sw`, vars `--ip --is --iw`), CSS-only animation (loops by default; `m-hover` / `m-loop` / off, `prefers-reduced-motion`). Brand: navy `#1F4566` + sand `#E9C46A` (header text `#F2D9A0`). Motif: the wave from the active-menu underline, plus round accents.
 
 | Artboard | Contents |
 |---|---|
