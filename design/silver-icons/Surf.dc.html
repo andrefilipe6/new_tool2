@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Ícones de surf</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;family=DM+Mono&amp;display=swap">
+<style>
+
+
+
+body{margin:0;font-family:"Nunito Sans",sans-serif;background:#F3F4F7}
+.dp{fill:var(--ip);stroke:var(--ip)} .ds{fill:var(--is);stroke:var(--is)}
+.fp{fill:var(--ip)} .fs{fill:var(--is)} .fw{fill:var(--iw)}
+.sp{stroke:var(--ip)} .ss{stroke:var(--is)} .sw{stroke:var(--iw)}
+.a-sway,.a-pulse,.a-shake,.a-wave,.a-lift,.a-bob,.a-bounce,.a-float{transform-box:fill-box}
+.a-sway,.a-shake{transform-origin:50% 100%}
+.a-pulse{transform-origin:50% 50%}
+.a-wave,.a-lift{transform-origin:0% 100%}
+.a-draw{stroke-dasharray:1;stroke-dashoffset:0}
+@keyframes fi-sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes fi-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+@keyframes fi-shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+@keyframes fi-wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg)}}
+@keyframes fi-blink{0%,100%{opacity:1}50%{opacity:.15}}
+@keyframes fi-draw{0%{stroke-dashoffset:1}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
+@keyframes fi-lift{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
+@keyframes fi-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes fi-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-2.5px)}60%{transform:translateY(-2.5px)}}
+.m-loop .a-sway,.m-hover .fi-card:hover .a-sway{animation:fi-sway 2.8s ease-in-out infinite}
+.m-loop .a-slow,.m-hover .fi-card:hover .a-slow{animation-duration:4s}
+.m-loop .a-pulse,.m-hover .fi-card:hover .a-pulse{animation:fi-pulse .9s ease-in-out infinite}
+.m-loop .a-shake,.m-hover .fi-card:hover .a-shake{animation:fi-shake .7s ease-in-out infinite}
+.m-loop .a-wave,.m-hover .fi-card:hover .a-wave{animation:fi-wave 1.4s ease-in-out infinite}
+.m-loop .a-blink,.m-hover .fi-card:hover .a-blink{animation:fi-blink 1.4s ease-in-out infinite}
+.m-loop .a-draw,.m-hover .fi-card:hover .a-draw{animation:fi-draw 3.2s ease-in-out infinite}
+.m-loop .a-lift,.m-hover .fi-card:hover .a-lift{animation:fi-lift 2.4s ease-in-out infinite}
+.m-loop .a-bob,.m-hover .fi-card:hover .a-bob,.m-loop .a-float,.m-hover .fi-card:hover .a-float{animation:fi-bob 1.6s ease-in-out infinite}
+.m-loop .a-bounce,.m-hover .fi-card:hover .a-bounce{animation:fi-bounce 1.2s ease-in-out infinite}
+.m-loop .a-d2,.m-hover .fi-card:hover .a-d2{animation-delay:-.35s}
+
+.a-swing{transform-box:fill-box;transform-origin:50% 0%}
+.a-arch{transform-box:fill-box;transform-origin:100% 100%}
+.a-ripple{transform-box:fill-box}
+@keyframes fi-swing{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes fi-arch{0%,100%{transform:rotate(0)}50%{transform:rotate(-12deg)}}
+@keyframes fi-ripple{0%,100%{transform:translate(0,0)}50%{transform:translate(1.2px,.8px)}}
+.m-loop .a-swing,.m-hover .fi-card:hover .a-swing{animation:fi-swing 2.6s ease-in-out infinite}
+.m-loop .a-arch,.m-hover .fi-card:hover .a-arch{animation:fi-arch 3s ease-in-out infinite}
+.m-loop .a-ripple,.m-hover .fi-card:hover .a-ripple{animation:fi-ripple 1.8s ease-in-out infinite}
+.m-loop .a-d3,.m-hover .fi-card:hover .a-d3{animation-delay:-.7s}
+.a-grow{transform-box:fill-box;transform-origin:50% 100%}
+.a-rot{transform-box:fill-box;transform-origin:50% 50%}
+.a-hand{transform-box:fill-box;transform-origin:0% 0%}
+.a-door{transform-box:fill-box;transform-origin:0% 50%}
+@keyframes fi-rot{to{transform:rotate(360deg)}}
+@keyframes fi-hand{to{transform:rotate(360deg)}}
+@keyframes fi-door{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.72)}}
+.m-loop .a-rot,.m-hover .fi-card:hover .a-rot{animation:fi-rot 3s linear infinite}
+.m-loop .a-hand,.m-hover .fi-card:hover .a-hand{animation:fi-hand 2.4s linear infinite}
+.m-loop .a-door,.m-hover .fi-card:hover .a-door{animation:fi-door 2s ease-in-out infinite}
+.a-wink,.a-write,.a-lid,.a-nudge,.a-nudge-r,.a-quarter,.a-search{transform-box:fill-box}
+.a-wink{transform-origin:50% 50%}.a-write{transform-origin:0% 100%}.a-lid{transform-origin:0% 100%}.a-quarter{transform-origin:50% 50%}.a-search{transform-origin:50% 50%}
+@keyframes fi-wink{0%,40%,60%,100%{transform:scaleY(1)}50%{transform:scaleY(.12)}}
+@keyframes fi-write{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(4deg)}}
+@keyframes fi-lid{0%,100%{transform:rotate(0)}50%{transform:rotate(-20deg) translateY(-1px)}}
+@keyframes fi-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-2px)}}
+@keyframes fi-nudge-r{0%,100%{transform:translateX(0)}50%{transform:translateX(2px)}}
+@keyframes fi-quarter{0%{transform:rotate(0)}40%,100%{transform:rotate(90deg)}}
+@keyframes fi-search{0%,100%{transform:translate(0,0)}25%{transform:translate(-1px,-1px)}75%{transform:translate(1px,0)}}
+.m-loop .a-wink,.m-hover .fi-card:hover .a-wink{animation:fi-wink 2.2s ease-in-out infinite}
+.m-loop .a-write,.m-hover .fi-card:hover .a-write{animation:fi-write .9s ease-in-out infinite}
+.m-loop .a-lid,.m-hover .fi-card:hover .a-lid{animation:fi-lid 1.2s ease-in-out infinite}
+.m-loop .a-nudge,.m-hover .fi-card:hover .a-nudge{animation:fi-nudge 1s ease-in-out infinite}
+.m-loop .a-nudge-r,.m-hover .fi-card:hover .a-nudge-r{animation:fi-nudge-r 1s ease-in-out infinite}
+.m-loop .a-quarter,.m-hover .fi-card:hover .a-quarter{animation:fi-quarter 1.4s ease-in-out infinite}
+.m-loop .a-search,.m-hover .fi-card:hover .a-search{animation:fi-search 1.2s ease-in-out infinite}
+button.fi-card:focus-visible{outline:2px solid #2A1A24;outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.m-loop *,.m-hover *{animation:none!important}}
+
+
+.a-wavex{transform-box:fill-box}
+@keyframes fi-wavex{0%,100%{transform:translateX(0)}50%{transform:translateX(-1.5px)}}
+.m-loop .a-wavex,.m-hover .fi-card:hover .a-wavex{animation:fi-wavex 1.2s ease-in-out infinite}
+
+</style>
+</helmet>
+<div class="m-{{motion}}" style="--ip: {{primary}}; --is: {{secondary}}; --iw: #FFFFFF; width: 1280px; height: 820px; box-sizing: border-box; padding: 56px 64px; display: flex; flex-direction: column; gap: 28px; background: #F3F4F7; font-family: 'Nunito Sans', sans-serif">
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'DM Mono', monospace; font-size: 13px; color: #1F4566">silver.andmore.pt · site público</div><h1 style="margin: 0; font-family: Lexend, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; color: #16324A">Ícones de surf</h1><svg width="64" height="8" viewBox="0 0 64 8" aria-hidden="true"><path d="M2 4q4-4 8 0t8 0t8 0t8 0t8 0t8 0t8 0" fill="none" stroke="{{secondary}}" stroke-width="2.4" stroke-linecap="round"/></svg><div style="font-size: 14px; color: #5A6B7B">Modalidades, aluguer e condições do mar</div></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="fs" cx="5.5" cy="7.5" r="2"/><circle class="fs" cx="18.5" cy="7.5" r="2"/><path class="fs" d="M2.8 15.5a2.7 2.7 0 0 1 5.4 0z"/><path class="fs" d="M15.8 15.5a2.7 2.7 0 0 1 5.4 0z"/><g class="a-bob"><circle class="fp" cx="12" cy="6" r="2.5"/><path class="fp" d="M8.3 15.5a3.7 3.7 0 0 1 7.4 0z"/></g><path class="ss a-wavex" fill="none" stroke-width="1.9" d="M2 19.5q1.43 -1.6 2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Aula de grupo</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-grupo</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="fp" cx="8" cy="5" r="2.5"/><path class="fp" d="M5 18v-6a3 3 0 0 1 6 0v6z"/><g class="a-sway"><path class="fs" d="M16.5 2.5c2 0 3.3 4.2 3.3 9.5s-1.3 9.5-3.3 9.5-3.3-4.2-3.3-9.5 1.3-9.5 3.3-9.5z"/><path class="sw" fill="none" stroke-width="1" d="M16.5 4v15"/></g><path class="ss" fill="none" stroke-width="1.6" d="M2 21q1.5 -1.6 3 0t3 0t3 0"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Aula privada</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-privada</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="a-bounce"><circle class="fp" cx="12" cy="6.5" r="3.3"/><path class="fp" d="M8.5 17.5v-3.2a3.5 3.5 0 0 1 7 0v3.2z"/><path class="sp" fill="none" stroke-width="1.8" d="M9 12.5L6 9.5M15 12.5l3-3"/></g><path class="ss" fill="none" stroke-width="1.9" d="M3 20.5q1.5 -1.6 3 0t3 0t3 0t3 0t3 0t3 0"/><circle class="fs a-blink" cx="19.5" cy="4" r="1.3"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Surf infantil</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-infantil</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="a-bob"><rect class="fp" x="5" y="3.5" width="11" height="16" rx="3.5" transform="rotate(-14 10.5 11.5)"/><rect class="fw" x="7" y="6" width="7" height="2" rx="1" transform="rotate(-14 10.5 11.5)"/></g><path class="ss" fill="none" stroke-width="1.5" d="M15.8 5.5c3 0 5.2 2.4 4.6 5.5"/><circle class="fs" cx="20.2" cy="12.4" r="1.5"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Bodyboard</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-bodyboard</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fp" d="M2 18c0-1.2 4.5-2 10-2s10 .8 10 2-4.5 2-10 2-10-.8-10-2z"/><g class="a-sway"><path class="sp" fill="none" stroke-width="1.8" d="M9 3l6 12"/><ellipse class="fs" cx="15.6" cy="15.6" rx="1.4" ry="2.6" transform="rotate(-27 15.6 15.6)"/></g><path class="ss" fill="none" stroke-width="1.4" d="M2 22q1.43 -1.2 2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Stand up paddle</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-sup</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ss a-wavex" fill="none" stroke-width="1.8" d="M5 6.5q1.5 -1.6 3 0t3 0t3 0t3 0t3 0"/><g class="a-bob"><path class="fp" d="M2.5 11.8c.3 1.6 1.4 2.7 3 2.7h13c1.6 0 2.7-1.1 3-2.7z"/><circle class="fs" cx="7" cy="17.6" r="1.9"/><circle class="fs" cx="17" cy="17.6" r="1.9"/></g></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Surfskate</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-surfskate</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fp" d="M5.2 18.8C3.6 17.2 5.6 10.9 10.2 6.3S19.7 2.6 20.6 3.5s.4 6.2-4.2 10.8-9.6 6.1-11.2 4.5z"/><path class="sw" fill="none" stroke-width="1.1" d="M6.8 17.2L18.4 5.6"/><g class="a-swing"><path class="fs" d="M13.2 13h5.2l2.4 2.5-2.4 2.5h-5.2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1z"/><circle class="fw" cx="14.3" cy="15.5" r="0.8"/></g></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Aluguer de prancha</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-aluguer-prancha</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fp" d="M9 2.5h6l1.2 2.4 3.6 1.6 1.2 8.3-2.3.6-1.2-6.1-1.5 1.1V21h-3.2l-.8-6.6-.8 6.6H7.8V10.4L6.3 9.3l-1.2 6.1-2.3-.6 1.2-8.3 3.6-1.6z"/><path class="sw" fill="none" stroke-width="1.2" d="M12 4.5v7.5"/><circle class="fs a-blink" cx="12" cy="13.2" r="0.9"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Aluguer de fato</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-aluguer-fato</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fp" d="M2 20.5c.8-6.2 4.9-11 10.8-11 4 0 7.2 2.4 7.2 5.8 0 2.2-1.6 3.6-3.6 3.6-1.7 0-2.8-1.1-2.8-2.5 0-1 .6-1.8 1.5-2.1-1-.9-2.6-1.3-4.1-1.1-3.5.6-5.6 3.9-6 7.3z"/><path class="ss" fill="none" stroke-width="1.8" d="M2 21h20"/><circle class="fs a-pulse" cx="19" cy="5" r="2.4"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Condições do mar</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-ondas</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ss a-wavex" fill="none" stroke-width="1.8" d="M2 15.5q1.43 -1.6 2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0"/><path class="ss" fill="none" stroke-width="1.8" d="M2 20q1.43 -1.6 2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0t2.86 0"/><g class="a-bob"><path class="fp" d="M8 2.5L4.5 6.5h2.4V11h2.2V6.5h2.4z"/></g><path class="fp" d="M16 11.5l3.5-4h-2.4V3h-2.2v4.5h-2.4z"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Maré</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-mare</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="a-nudge-r"><path class="sp" fill="none" stroke-width="2.1" d="M3 8h10.5a2.5 2.5 0 1 0-2.5-2.5M3 12h15a2.5 2.5 0 1 1-2.5 2.5"/></g><path class="ss" fill="none" stroke-width="2.1" d="M3 16.5h7"/><circle class="fs" cx="20" cy="19.5" r="1.3"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Vento</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-vento</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="fp" x="3" y="15" width="4.5" height="6" rx="1.2"/><rect class="fp" x="9.75" y="11" width="4.5" height="10" rx="1.2"/><rect class="fp" x="16.5" y="7" width="4.5" height="14" rx="1.2"/><path class="ss a-wavex" fill="none" stroke-width="1.7" d="M3 5q1.75 -1.6 3.5 0t3.5 0t3.5 0t3.5 0"/><circle class="fs" cx="18.8" cy="3.6" r="1.3"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Nível</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-nivel</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fp" stroke-linejoin="round" d="M2.5 20L12 4.5 21.5 20z"/><path class="fw" d="M12 20l-2.6-5.2h5.2z"/><path class="sp" fill="none" stroke-width="1.6" d="M1 20.7h22"/><circle class="fs a-pulse" cx="19.5" cy="5" r="2.2"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Surf camp</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-camp</div></div></div>
+<div class="fi-card" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E3E7EE; border-radius: 14px"><div style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #EEF2F7; border-radius: 12px"><svg width="28" height="28" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="fp" x="2.5" y="7" width="19" height="13" rx="2.5"/><rect class="fp" x="8" y="4.5" width="7" height="4" rx="1.2"/><circle class="fw" cx="12" cy="13.5" r="4.2"/><circle class="fs a-pulse" cx="12" cy="13.5" r="2.2"/><rect class="fs" x="16.5" y="9" width="2.5" height="1.6" rx=".8"/></svg></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><div style="font-size: 13.5px; font-weight: 700; line-height: 1.25; color: #16324A">Fotos e vídeo</div><div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5A6B7B">si-fotos</div></div></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion": {"editor": "enum", "options": ["hover", "loop", "off"], "default": "hover"}, "primary": {"editor": "color", "default": "#1F4566", "options": ["#1F4566", "#0E7490", "#16324A"]}, "secondary": {"editor": "color", "default": "#E9C46A", "options": ["#E9C46A", "#F2D9A0", "#5FB7D4"]}, "$preview": {"width": 1280, "height": 820}}'>
+class Component extends DCLogic {
+renderVals() {
+return { motion: this.props.motion ?? 'hover', primary: this.props.primary ?? '#1F4566', secondary: this.props.secondary ?? '#E9C46A' };
+}
+}
+</script>
+</body>
+</html>
